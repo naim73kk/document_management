@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Document</title>
+</head>
+<body>
+
+    <h1>{{ document.category }} - {{ document.document_name }}</h1>
+
+    <div style="height: 600px;">
+        <!-- Using iframe to display PDF -->
+        <!-- Alternative using embed tag -->
+        <embed src="{{ document.pdf_document.url }}" width="100%" height="600px" type="application/pdf">
+
+
+        <!-- Alternatively, you can use the embed tag -->
+        <!-- <embed src="{{ document.pdf_document.url }}" width="100%" height="600px" type="application/pdf"> -->
+    </div>
+
+</body>
+</html>
